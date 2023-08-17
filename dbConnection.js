@@ -10,8 +10,6 @@ const client = new MongoClient(uri, {
 async function runDBConnection() {
     try {
         await client.connect();
-        // collection = client.db().collection('Cat');
-        // console.log(collection);
     } catch(ex) {
         console.error(ex);
     }
