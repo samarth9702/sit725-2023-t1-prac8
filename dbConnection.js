@@ -1,5 +1,6 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://samarth9702:admin@cluster0.fpjlrcn.mongodb.net/";
+
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
@@ -7,12 +8,6 @@ const client = new MongoClient(uri, {
         deprecationErrors: true,
     }
 });
-async function runDBConnection() {
-    try {
-        await client.connect();
-    } catch(ex) {
-        console.error(ex);
-    }
-}
-runDBConnection();
+client.connect();
+
 module.exports = client;

@@ -44,6 +44,17 @@ function getAllCats(){
         }
     });
 }
+function deleteCat(_id) {
+    $.ajax({
+      url: `/api/cat/${_id}`,
+      type: 'DELETE',
+      success: (result)=>{
+        if (result.statusCode === 201) {
+            alert('delete post successful');
+        }
+    }
+    });
+  }
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();

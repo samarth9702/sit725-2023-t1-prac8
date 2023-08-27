@@ -1,24 +1,25 @@
 const { expect } = require("chai");
 const request = require("request");
 
-describe("Get Function Test", function(){
-    it('returns statuscode of 200',  function(done){
+describe("Get: Test", function(){
+    it('return statuscode of 200',  function(done){
         request("http://localhost:3000/api/cat",function(a,b,c){
-            console.log("arguments[2")
+            console.log("arguments[0]")
+            console.log(arguments[0])
+            console.log("arguments[1]")
+            console.log(arguments[1])
+            console.log("arguments[2]")
             console.log(arguments[2])
-            let resp = JSON.parse(c)
-            expect(resp.statusCode).to.equal(200);
+            let resObj = JSON.parse(c)
+            expect(resObj.statusCode).to.equal(200);
             done()
-        })
-    })
+        });
+    });
 });
 
 
-
-
-
-describe("Post Function Test", function() {
-  it('returns status code of 201', function(done) {
+describe("Post: Test", function() {
+  it('return status code of 201', function(done) {
    
 const catData = {
     "id":"1",
@@ -39,13 +40,13 @@ const catData = {
   });
 });
 
-describe("Delete function Test", function() {
-    it('returns status code of 200', function(done) {
-      const catId = '1'; 
+describe("Delete: Test", function() {
+    it('return status code of 200', function(done) {
+      const cId = '2'; 
   
       request.delete(
         {
-          url: 'http://localhost:3000/api/cat/${catId}'
+          url: 'http://localhost:3000/api/cat/${cId}'
         },
         done()
       );

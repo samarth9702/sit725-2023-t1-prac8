@@ -1,6 +1,6 @@
 let collection = require('../model/cat');
 
-const postCat = (req,res) => {
+function postCat (req,res) {
     let cat = req.body;
     collection.postCat(cat, (err,result) => {
         if (!err) {
@@ -9,7 +9,7 @@ const postCat = (req,res) => {
     });
 }
 
-const getAllCats = (req,res) => {
+function getAllCats(req,res) {
     collection.getAllCats((err,result)=>{
         if (!err) {
             res.json({statusCode:200,data:result,message:'success'});
@@ -17,7 +17,7 @@ const getAllCats = (req,res) => {
     });
 }
 
-const deleteCat = (req,res) => {
+function deleteCat (req,res) {
     let cat = req.body;
     collection.postCat(cat, (err,result) => {
         if(!err){

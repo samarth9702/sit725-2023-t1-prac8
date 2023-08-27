@@ -1,32 +1,33 @@
 {
-  "name": "sit725-2023-t2-prac5",
+  "name": "sit725-2023-t1-prac6",
   "version": "1.0.0",
+  "description": "",
   "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "^4.3.7",
+    "express": "^4.18.2",
+    "mongodb": "^4.4.1",
+    "nodemon": "^3.0.1",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  },
   "scripts": {
     "test": "mocha --reporter spec",
     "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samarth9702/sit725-2023-t2-prac5.git"
+    "url": "git+https://github.com/samarth9702/sit725-2023-t1-prac6.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samarth9702/sit725-2023-t2-prac5/issues"
+    "url": "https://github.com/samarth9702/sit725-2023-t1-prac6/issues"
   },
-  "homepage": "https://github.com/samarth9702/sit725-2023-t2-prac5#readme",
-  "dependencies": {
-    "chai": "^4.3.8",
-    "express": "^4.18.2",
-    "mocha": "^10.2.0",
-    "mongodb": "^5.7.0",
-    "nodemon": "^3.0.1",
-    "request": "^2.88.2"
-  },
-  "devDependencies": {},
-  "directories": {
-    "test": "test"
-  },
-  "description": ""
+  "homepage": "https://github.com/samarth9702/sit725-2023-t1-prac6#readme"
 }
