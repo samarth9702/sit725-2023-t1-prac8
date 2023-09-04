@@ -38,7 +38,6 @@ function postCat(cat){
 
 function getAllCats(){
     $.get('/api/cat', (response)=>{
-       
         if (response.statusCode === 200) {
             addCards(response.data);
         }
@@ -55,6 +54,11 @@ function deleteCat(_id) {
     }
     });
   }
+
+let socket = io();
+socket.on('number',(msg)=>{
+    console.log('Random Number: ' + msg);
+});
 
 $(document).ready(function(){
     $('.materialboxed').materialbox();
